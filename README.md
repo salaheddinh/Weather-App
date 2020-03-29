@@ -10,7 +10,7 @@ The application has two screen
 
 | Home       | Search      |
 |------------|-------------|
-| <img src="https://drive.google.com/uc?id=1xdW1OLy_KHS7Zk8a50dptcnqtkl1iMmL" width="250"> | ![Webp net-resizeimage](https://user-images.githubusercontent.com/37736818/77853861-95a99080-71f7-11ea-91e5-c3a70432118f.jpg) |
+| ![Webp net-resizeimage (1)](https://user-images.githubusercontent.com/37736818/77853913-fb961800-71f7-11ea-9b4b-12ac89a831d9.jpg) | ![Webp net-resizeimage](https://user-images.githubusercontent.com/37736818/77853861-95a99080-71f7-11ea-91e5-c3a70432118f.jpg) |
 
 ## Android considered things
 * Architecture design pattern: MVVM
