@@ -1,4 +1,4 @@
-package com.salaheddin.weatherapp.home.utils
+package com.salaheddin.weatherapp.pages.home.utils
 
 object ValidationUtils {
     fun validateSearchKeywords(keywords: String): String {

@@ -1,4 +1,4 @@
-package com.salaheddin.weatherapp.search
+package com.salaheddin.weatherapp.pages.search
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,7 +10,7 @@ import com.salaheddin.weatherapp.R
 import com.salaheddin.weatherapp.models.Response
 import com.salaheddin.weatherapp.models.Status
 import com.salaheddin.weatherapp.models.responseModel.WeatherData
-import com.salaheddin.weatherapp.search.adapters.CityWeatherAdapter
+import com.salaheddin.weatherapp.pages.search.adapters.CityWeatherAdapter
 import com.salaheddin.weatherapp.utils.*
 import kotlinx.android.synthetic.main.activity_search.*
 import org.koin.androidx.viewmodel.ext.android.viewModel

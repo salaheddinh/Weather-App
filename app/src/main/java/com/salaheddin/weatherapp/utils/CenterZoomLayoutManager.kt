@@ -10,7 +10,7 @@ class CenterZoomLayoutManager : LinearLayoutManager {
     private val mShrinkAmount = 0.15f
     private val mShrinkDistance = 0.9f
 
-    constructor(context: Context) : super(context) {}
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, orientation: Int, reverseLayout: Boolean) : super(
         context,
@@ -21,9 +21,6 @@ class CenterZoomLayoutManager : LinearLayoutManager {
 
     override fun onLayoutChildren(recycler: RecyclerView.Recycler?, state: RecyclerView.State) {
         super.onLayoutChildren(recycler, state)
-        /*val child = getChildAt(0)!!
-        child.visibility = View.INVISIBLE
-        addView(child, 0)*/
         val midpoint = width / 2f
         val d0 = 0f
         val d1 = mShrinkDistance * midpoint
@@ -45,7 +42,7 @@ class CenterZoomLayoutManager : LinearLayoutManager {
         state: RecyclerView.State?
     ): Int {
         val orientation = orientation
-        if (orientation == LinearLayoutManager.VERTICAL) {
+        if (orientation == VERTICAL) {
             val scrolled = super.scrollVerticallyBy(dy, recycler, state)
             val midpoint = height / 2f
             val d0 = 0f
@@ -72,7 +69,7 @@ class CenterZoomLayoutManager : LinearLayoutManager {
         state: RecyclerView.State?
     ): Int {
         val orientation = orientation
-        if (orientation == LinearLayoutManager.HORIZONTAL) {
+        if (orientation == HORIZONTAL) {
             val scrolled = super.scrollHorizontallyBy(dx, recycler, state)
 
             val midpoint = width / 2f

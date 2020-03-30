@@ -1,4 +1,4 @@
-package com.salaheddin.weatherapp.home.adapters
+package com.salaheddin.weatherapp.pages.home.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -24,14 +24,14 @@ class DayWeatherAdapter(
             mInflater = LayoutInflater.from(parent.context)
         }
         val view = mInflater!!.inflate(R.layout.item_day_weather, parent, false)
-        return ServiceViewHolder(view)
+        return DayWeatherViewHolder(view)
     }
 
     override fun onBindViewHolder(
         holder: RecyclerView.ViewHolder,
         position: Int
     ) {
-        if (holder is ServiceViewHolder) {
+        if (holder is DayWeatherViewHolder) {
             holder.setData(data[position])
         }
     }
@@ -40,7 +40,7 @@ class DayWeatherAdapter(
         return data.size
     }
 
-    internal inner class ServiceViewHolder(
+    internal inner class DayWeatherViewHolder(
         itemView: View
     ) : RecyclerView.ViewHolder(itemView) {
 

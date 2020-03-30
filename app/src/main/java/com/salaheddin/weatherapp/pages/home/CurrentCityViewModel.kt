@@ -1,4 +1,4 @@
-package com.salaheddin.weatherapp.home
+package com.salaheddin.weatherapp.pages.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

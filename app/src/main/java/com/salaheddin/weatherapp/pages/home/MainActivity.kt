@@ -1,4 +1,4 @@
-package com.salaheddin.weatherapp.home
+package com.salaheddin.weatherapp.pages.home
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -19,12 +19,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.salaheddin.weatherapp.*
-import com.salaheddin.weatherapp.home.adapters.DayWeatherAdapter
-import com.salaheddin.weatherapp.home.utils.ValidationUtils
+import com.salaheddin.weatherapp.pages.home.adapters.DayWeatherAdapter
+import com.salaheddin.weatherapp.pages.home.utils.ValidationUtils
 import com.salaheddin.weatherapp.models.Response
 import com.salaheddin.weatherapp.models.Status
 import com.salaheddin.weatherapp.models.responseModel.WeatherData
-import com.salaheddin.weatherapp.search.SearchActivity
+import com.salaheddin.weatherapp.pages.search.SearchActivity
 import com.salaheddin.weatherapp.utils.*
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         when (it.status) {
             Status.SUCCESS -> {
                 showData(data, loading, error)
-                bindCurrentWaether(it.data!!)
+                bindCurrentWeather(it.data!!)
             }
 
             Status.ERROR -> {
@@ -185,7 +185,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun bindCurrentWaether(data: WeatherData) {
+    private fun bindCurrentWeather(data: WeatherData) {
         supportActionBar?.title = data.name
         tvTodayDate.text = Utils.dateLongToShowDate(data.time * 1000)
         Glide.with(this).load(data.weather[0].iconUrl).into(ivWeatherIcon)
