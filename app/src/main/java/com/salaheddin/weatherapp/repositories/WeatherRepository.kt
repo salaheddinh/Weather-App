@@ -32,9 +32,9 @@ class WeatherRepository(
         }
     }
 
-    suspend fun getWeather(lan: Int, lon: Int): Response<WeatherData> {
+    suspend fun getWeather(lat: Int, lon: Int): Response<WeatherData> {
         try {
-            val response = apiService.getWeather(lan, lon, Constants.APP_ID, Constants.UNIT)
+            val response = apiService.getWeather(lat, lon, Constants.APP_ID, Constants.UNIT)
 
             return if (response != null) {
                 try {
